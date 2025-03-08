@@ -11,16 +11,17 @@ import { Component, Input, input, computed ,Output, EventEmitter} from '@angular
 export class UserComponent {
    //@Input({required:true}) avatar!:string;
    //@Input({required:true}) name!:string;
+
    avatar = input.required<string>();
    name = input.required<string>();
    @Output() select = new EventEmitter();
-  * get imagePath(){
+   get imagePath(){
     return  '../assets/users/' + this.avatar;
    }
     
 
    onSelectUser (){
-    
+    this.select.emit();
    }
 
   }
