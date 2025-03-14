@@ -8,7 +8,7 @@ import {
   output,
 } from '@angular/core';
 
-import { type User } from './user.model';
+import { User } from './user.model';
 @Component({
   selector: 'app-user',
   standalone: true,
@@ -18,6 +18,7 @@ import { type User } from './user.model';
 })
 export class UserComponent {
  @Input({required: true}) user!:User;
+ @Input({required: true}) selected!: boolean;
   @Output() select = new EventEmitter<string>();
  // select = output<string>(); //output is a function , we dont have to use event emitter
   get imagePath() {

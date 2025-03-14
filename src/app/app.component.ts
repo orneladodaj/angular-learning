@@ -7,7 +7,7 @@ import { NgFor , NgIf } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, UserComponent, TaskComponent, NgFor,NgIf], // Importing the standalone component
+  imports: [HeaderComponent, UserComponent, TaskComponent], // Importing the standalone component
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
